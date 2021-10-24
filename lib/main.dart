@@ -24,29 +24,32 @@ class _DiceePageState extends State<DiceePage> {
   int rightDiceNumber = 1;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          child: FlatButton(
-            onPressed: () {
-              setState(() {
-                leftDiceNumber = Random().nextInt(6) + 1;
-              });
-            },
-            child: Image.asset('images/dice$leftDiceNumber.png'),
+    return Center(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
+            ),
           ),
-        ),
-        Expanded(
-          child: FlatButton(
-            onPressed: () {
-              setState(() {
-                rightDiceNumber = Random().nextInt(7) + 1;
-              });
-            },
-            child: Image.asset('images/dice$rightDiceNumber.png'),
-          ),
-        )
-      ],
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  rightDiceNumber = Random().nextInt(7) + 1;
+                });
+              },
+              child: Image.asset('images/dice$rightDiceNumber.png'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
