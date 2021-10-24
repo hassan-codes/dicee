@@ -18,8 +18,18 @@ class DiceePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Expanded(child: Image.asset('images/dice1.png')),
-        Expanded(child: Image.asset('images/dice2.png'))
+        Expanded(
+          child: FlatButton(
+            onPressed: () {},
+            child: Image.asset('images/dice1.png'),
+          ),
+        ),
+        Expanded(
+          child: FlatButton(
+            onPressed: () {},
+            child: Image.asset('images/dice2.png'),
+          ),
+        )
       ],
     );
   }
